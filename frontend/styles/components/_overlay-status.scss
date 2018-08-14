@@ -1,0 +1,43 @@
+.overlay-status {
+  .overlay {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .loader {
+      width: 150px;
+      height: 150px;
+      position: sticky;
+      top: 50%;
+      left: 50%;
+      transform: translate(50%, -50%);
+      background-color: $white;
+      box-shadow: 3px 3px 30px -10px #000;
+      border-radius: 5px;
+
+      .spinner,
+      .svg-icon {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .spinner {
+        margin: -25px;
+      }
+
+      .message {
+        position: absolute;
+        left: 50%;
+        top: calc(45% + 25px);
+        transform: translate(-50%, 0);
+        text-align: center;
+      }
+    }
+  }
+}

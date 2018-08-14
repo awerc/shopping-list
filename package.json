@@ -1,0 +1,16 @@
+{
+   "name": "shopping-list",
+   "version": "1.0.0",
+   "main": "index.js",
+   "author": "Artemov Anton",
+   "license": "none",
+   "private": true,
+   "scripts": {
+      "install-modules": "(cd frontend && yarn) && (cd backend && yarn)",
+      "start": "cd backend && yarn start",
+      "heroku-prebuild": "cd frontend && yarn install --production=false && yarn build && cd ../backend && yarn install --production=false && yarn build"
+   },
+   "engines": {
+      "node": "10.7.0"
+   }
+}

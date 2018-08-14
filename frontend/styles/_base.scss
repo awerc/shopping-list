@@ -1,0 +1,96 @@
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../fonts/roboto/roboto.css";
+@import "../fonts/open_sans/open-sans.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+html {
+  min-width: 800px;
+  font-size: $default-font-size;
+}
+
+body {
+  background: $white;
+  background: url("../images/features-bg.png");
+  font-family: $font-open-sans;
+  font-size: $default-font-size;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: $blue-500;
+  }
+
+  &:hover {
+    color: $blue-400;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    color: $gray-600 !important;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#root {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 10px;
+  will-change: width;
+  background: transparent;
+  transition: width 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar * {
+  background: transparent;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 8px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+:hover::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 0 8px rgba(0, 0, 0, 0.35);
+}

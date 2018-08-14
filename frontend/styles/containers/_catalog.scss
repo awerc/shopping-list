@@ -1,0 +1,83 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  height: 100%;
+  background-color: $white;
+
+  & > * {
+    padding: 10px 15px 0;
+  }
+
+  & > .loader {
+    @extend %absolute-center;
+  }
+
+  .header {
+    padding: 10px 15px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .sort {
+    text-align: right;
+  }
+
+  .purchases {
+    overflow: hidden;
+    overflow-y: overlay;
+    flex: 1;
+
+    .purchase {
+      display: flex;
+      padding: 10px;
+      background: linear-gradient(to right, $gray-200 50%, transparent 50%) repeat-x left bottom;
+      background-size: 15px 1px;
+
+      &.completed {
+        color: $gray-300;
+
+        .name {
+          text-decoration: line-through;
+        }
+      }
+
+      .name {
+        flex: 10;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .quantity,
+      .cost {
+        margin-right: 10px;
+        flex: 1 0 70px;
+      }
+
+      .controls {
+        visibility: hidden;
+
+        .glyphicon {
+          cursor: pointer;
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+
+          &-remove {
+            color: #e40e0e;
+          }
+
+          &-pencil {
+            color: #1f78ce;
+          }
+        }
+      }
+
+      &:hover .controls {
+        visibility: visible;
+      }
+    }
+  }
+}
+

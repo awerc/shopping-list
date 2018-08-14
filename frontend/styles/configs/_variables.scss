@@ -1,0 +1,45 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+$icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+
+// Colors
+$blue-100: #edeef0;
+$blue-200: #e1e5eb;
+$blue-300: #7d9cb8;
+$blue-400: #5e8af0;
+$blue-500: #3c7ebc;
+$blue-600: #337ab7;
+$blue-700: #204d74;
+
+$gray-100: #f4f4f4;
+$gray-200: #d9d9d9;
+$gray-300: #989898;
+$gray-400: #434343;
+$gray-500: #333;
+$gray-600: #2b2b2b;
+$gray-700: #282828;
+
+$black: #000;
+$white: #fff;
+
+// Media
+$media-max-width: 1200px;
+$media-min-width: 800px;
+
+// Fonts
+$font-roboto: Roboto, sans-serif;
+$font-open-sans: OpenSans, sans-serif;
+
+$default-font-size: 16px;
+$title-font-size: calc(1rem + 14px);
+$second-title-font-size: calc(1rem + 8px);
+$third-title-font-size: calc(1rem + 4px);
+
+// Layout
+$header-height: 64px;
+$sidebar-width: 270px;
+$min-window-width: 727px;
+$lr-padding: 13%;
+
+// Other
+$transition: 0.2s ease-out 0s;

@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "no-extra-semi": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "consistent-return": [2, { "treatUndefinedAsUnspecified": true }],
+    "comma-dangle": 0,
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "class-methods-use-this": 0,
+    "eol-last": ["error", "always"],
+    "indent": ["error", 2, { "MemberExpression": 1 }],
+    "linebreak-style": 0,
+    "max-len": [2, 200, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false
+    }],
+    "no-multiple-empty-lines": ["error"],
+    "no-new-symbol": "error",
+    "no-trailing-spaces": ["error"],
+    "no-undef": ["error"],
+    "no-unused-vars": ["error"],
+    "object-curly-spacing": ["error", "always"],
+    "object-shorthand": "error",
+    "prefer-const": 2,
+    "quotes": ["error", "single"],
+    "space-in-parens": ["error", "never"],
+    "strict": [2, "never"]
+  },
+  "parser": "babel-eslint"
+}
