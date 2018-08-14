@@ -10,7 +10,7 @@ CREATE TABLE catalogs (
 
 CREATE TABLE purchases (
   ID SERIAL PRIMARY KEY,
-  catalogId INTEGER REFERENCES catalogs(ID),
+  catalogId INTEGER REFERENCES catalogs(ID) on delete cascade,
   name VARCHAR,
   quantity VARCHAR,
   cost VARCHAR,
