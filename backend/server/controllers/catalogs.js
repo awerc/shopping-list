@@ -1,7 +1,7 @@
 import { db } from '../config';
 
 const getAllCatalogs = (req, res, next) => {
-  db.any('select * from catalogs')
+  db.any('select * from catalogs ORDER BY id desc')
     .then(data => res.status(200).send(data))
     .catch(err => next(err));
 };

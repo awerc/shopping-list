@@ -10,7 +10,7 @@
   "scripts": {
     "generate-svg-sprite": "node sprite.generator.js",
     "start": "parcel ./index.html --no-cache",
-    "build": "parcel build ./index.html --out-dir ../backend/dist --no-minify"
+    "build": "parcel build ./index.html --out-dir ../backend/dist/frontend --no-minify"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-rc.1",

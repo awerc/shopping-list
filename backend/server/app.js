@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 app.use('/api', routes);
 
-if (app.get('env') === 'production') {
+if (true || app.get('env') === 'production') {
   app.use(express.static(path.resolve(__dirname, '..', 'dist', 'frontend')));
 
   app.get('*', (req, res) => {

@@ -8,7 +8,7 @@ import NotFound from './components/NotFound';
 const App = () => (
   <Layout>
     <Switch>
-      <Redirect exact from="/" to="/catalogs/1" />
+      <Redirect exact from="/" to="/catalogs/0" />
       <Route path="/catalogs/:id" exact component={Catalog} />
       <Route path="*" component={NotFound} />
     </Switch>
