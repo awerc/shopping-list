@@ -37,15 +37,15 @@ class Catalog extends Component {
 
     return (
       <div className="catalog">
+        <div className="header">
+          <SearchInput onSearch={this.handlePurchaseSearch} />
+        </div>
+
+        <OverlayStatus status={creatingStatus}>
+          <PurchaseCreationForm onSubmit={this.handlePurchaseCreate} />
+        </OverlayStatus>
+
         <ContentStatus status={status}>
-          <div className="header">
-            <SearchInput onSearch={this.handlePurchaseSearch} />
-          </div>
-
-          <OverlayStatus status={creatingStatus}>
-            <PurchaseCreationForm onSubmit={this.handlePurchaseCreate} />
-          </OverlayStatus>
-
           <SortControl onDirectionChange={this.handleSortDirectionChange} onFieldChange={this.handleSortFieldChange} />
 
           <div className="purchases">

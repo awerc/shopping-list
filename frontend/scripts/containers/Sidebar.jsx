@@ -43,11 +43,11 @@ class Sidebar extends React.Component {
           <div className="title">Покупки</div>
           <div className="btn add-category" onClick={this.handleCreatingFormOpen}>+</div>
         </div>
+        <CatalogCreationForm
+          className={classNames('catalog-creation', { visible: creating })}
+          onSubmit={this.handleCatalogCreate}
+        />
         <ContentStatus status={status} noMessage>
-          <CatalogCreationForm
-            className={classNames('catalog-creation', { visible: creating })}
-            onSubmit={this.handleCatalogCreate}
-          />
           <ul className="items">
             {data.map(({ id, name }) => (
               <li key={id} className="item">
